@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1 ApiCoin
+  .errors
+  form(action="/api/post", method="post" name="postForm")
+    label(for="nombre") Moneda
+    input#nombre(type="text" name="nombre") 
+    label(for="pais") Pais
+    input#pais(type="text" name="pais") 
+    label(for="anio") Anio
+    input#anio(type="text" name="anio") 
+    label(for="vigencia") Vigencia
+    input#vigencia(type="text" name="vigencia") 
+    input(type="submit", value="Enviar")
+  table 
+    thead
+      th id
+      th Nombre
+      th Pais
+      th Anio
+      th Vigencia
+      th Opciones 
+    tbody.posts 
+  script(src="/javascripts/main.js")
